@@ -1,0 +1,28 @@
+<div class="banner-section" id="banner-id">
+    <swiper-container class="banner-swiper"
+    autoplay-delay="2500" autoplay-disable-on-interaction="false"
+    effect="false">
+        @for (img of listImages; track img) {
+            <swiper-slide>
+                <img [src]="img" alt="banner image" class="banner-image"/>
+            </swiper-slide>
+        } @empty {
+            <!--Ini seperti alt apabila gambar kosong muncul kalimat Data ksoong-->
+            <swipwe-slide>
+                <h1>Data Kosong</h1>
+            </swipwe-slide>
+        }
+        <!--Menggunakan NgFor-->
+        <!--<swiper-slide *ngFor="let img of listImages">
+            <img [src]="img" alt="banner image" class="banner-image"/>
+        </swiper-slide>>-->
+    </swiper-container>
+    <div class="banner-overlay">
+        <div class="banner-layer"></div>
+        <div class="banner-description">
+            <h1 class="school-name">SMA Dharmawangsa</h1>
+            <h2 class="description-school">Selamat datang di SMA Dharmawangsa, tempat di mana bakat dan prestasi bersatu dalam sebuah perjalanan pendidikan yang inspiratif. Bersama kami, setiap langkahmu akan membawa kesuksesan dan pembelajaran yang tak terlupakan. Bergabunglah dengan kami dan wujudkan impianmu hari ini untuk menciptakan masa depan yang gemilang!</h2>
+            <button mat-flat-button class="btn-pendaftaran">Registration PSB 2024/2025</button>
+        </div>
+    </div>
+</div>
